@@ -1,0 +1,103 @@
+.old-tweets {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.tweet-textbox {
+  border: 0px solid #545149;
+  border-width: inherit;
+  border-style: none;
+  border-bottom-style: solid;
+  margin: 5px 10px 5px 10px;
+
+  height: 30%;
+}
+
+.tweet-text {
+  font-weight: inherit;
+  padding: 0px 10px;
+}
+article {
+  border: 3px solid #545149;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  margin: 20px 0px;
+}
+
+article header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 30%;
+  width: 95%;
+  margin: 10px 10px 0px 10px;
+  position: relative;
+  top: 0;
+  background-color: transparent;
+}
+
+.tweeter-name {
+  margin: auto 0;
+  padding-left: 5px;
+}
+
+.tweeter-profile {
+  margin: auto 0px;
+  display: flex;
+  align-items: center;
+}
+
+.tweeter-tag {
+  opacity: 0;
+  font-weight: 600;
+  margin: auto 0px;
+  padding-bottom: 3px;
+  transition: opacity 0.1s;
+}
+
+.tweeter-pic {
+  height: 60px;
+  width: 60px;
+}
+
+article footer {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+  padding-bottom: 5px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.tweet-date {
+  margin: auto 0;
+  height: 50%;
+  font-size: 0.5em;
+  padding-left: 23px;
+}
+
+.tweet-icons {
+  margin: auto 0;
+  height: 50%;
+  font-size: 0.5em;
+  padding-right: 23px;
+}
+
+article:hover {
+  font-weight: 400;
+  box-shadow: 5px 5px 3px #545149;
+  transition: box-shadow 0.3s, border-width 0.3s;
+}
+
+article:hover .tweeter-tag {
+  opacity: 0.4;
+  transition: opacity 0.3s;
+  
+}
+

@@ -1,0 +1,26 @@
+header {
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #d99e34;
+  background-image: url(../images/asfalt-light.png);
+  z-index: 3;
+}
+
+
+#profile-pic {
+  margin: auto;
+  width: 256px;
+}
+
+#name {
+  text-align: center;
+}
+
+header h2 {
+  margin-block-start: 0;
+}

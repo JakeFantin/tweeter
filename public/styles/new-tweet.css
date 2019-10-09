@@ -1,0 +1,36 @@
+.new-tweet {
+  padding-bottom: 1em;
+}
+
+#tweet-zone textarea {
+  border-style: none;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-color: #545149;
+  background-color: inherit;
+  width: 100%;
+  resize: none;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+  /* font-size: 1em; */
+}
+
+#tweet-zone input {
+  float: left;
+  background-color: #4056A1;
+  color: white;
+  border-style: none;
+  font-size: 0.8em;
+  padding: 4px 10px;
+  font-family: 'Bungee', sans-serif;
+}
+
+#tweet-zone span {
+  float: right;
+  font-family: 'Bungee', sans-serif;
+}
+
+.red {
+  color: red;
+}
