@@ -9,11 +9,12 @@
   border-style: none;
   border-bottom-style: solid;
   margin: 5px 10px 5px 10px;
-
   height: 30%;
 }
 
 .tweet-text {
+  overflow-wrap: break-word;
+  white-space: pre-line;
   font-weight: inherit;
   padding: 0px 10px;
 }
@@ -23,6 +24,14 @@ article {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   margin: 20px 0px;
+}
+
+article .load {
+  opacity: 0;
+}
+article .show {
+  opacity: 1;
+  transition: opacity 3s;
 }
 
 article header {
