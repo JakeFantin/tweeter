@@ -1,15 +1,13 @@
 header {
   height: 520px;
   width: 100%;
-  position: absolute;
-  top: 0px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   background-color: #d99e34;
   background-image: url(../images/asfalt-light.png);
-  z-index: 3;
+  z-index: 5;
 }
 
 
@@ -33,5 +31,15 @@ header h2 {
 
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
-  
+  header {
+    width: 30%;
+    height: auto;
+    top: 30vh;
+    margin-left: 50px;
+    position: fixed;
+  }
+
+  #profile-pic {
+    padding-top: 30px;
+  }
 }
