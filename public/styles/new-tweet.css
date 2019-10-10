@@ -1,8 +1,9 @@
 .new-tweet {
   padding-bottom: 1em;
-  height: 0px;
+  /* height: 0px; */
   overflow: hidden;
-  transition: height 0.7s;
+  display: none;
+  /* transition: height 0.7s; */
 }
 
 #tweet-zone textarea {
@@ -17,6 +18,17 @@
   font-weight: bold;
   margin-bottom: 5px;
   /* font-size: 1em; */
+}
+
+.errorMessage {
+  display: none;
+  border: 5px solid red;
+  color: red;
+  background-color: #FCEFEE;
+  text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-top: 1em;
 }
 
 #tweet-zone input {

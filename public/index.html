@@ -35,7 +35,7 @@
     <div class="nav-content">
       <span>tweeter</span>
       <div class="stacked">
-        <span>new tweet</span>
+        <span><b>Write</b> a new tweet!</span>
         <button id="showTweeter"><img src="/images/arrrow.png"></button>
       </div>
     </div>
@@ -53,6 +53,8 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
+      <div class="errorMessage" id="authError"><i class="fa fa-exclamation-triangle"></i>Error: No characters = bad time.</div>
+      <div class="errorMessage" id="authError2"><i class="fa fa-exclamation-triangle"></i>Error: Too many characters.</div>
       <h2>Compose Tweet</h2>
       <form id="tweet-zone" action="/tweets/" method="POST">
         <textarea id="new-tweet" name="text" rows="1" placeholder="What are you humming about?"></textarea>

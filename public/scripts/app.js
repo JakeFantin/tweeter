@@ -6,7 +6,7 @@
 $(document).ready(() => {
 
 
-  const escape =  function(str) {
+  const escape = function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -88,7 +88,7 @@ $(document).ready(() => {
     $.ajax({ method: 'GET', url: '/tweets/' })
       .then((res) => {
         const section = $('.old-tweets');
-        let article = createTweetElement(res[res.length-1]);
+        let article = createTweetElement(res[res.length - 1]);
         section.prepend(article);
         // const articleLoad = $('article .load');
         // articleLoad.addClass('show');
@@ -99,19 +99,26 @@ $(document).ready(() => {
   $('#tweet-zone').on('submit', function(event) {
     event.preventDefault();
     const tweet = $('#new-tweet');
+    const error = $('#authError');
+    const error2 = $('authError2');
     // Form Validation
     if (tweet[0].textLength === 0) {
-      alert("Needs text to twit.");
+      error.slideDown('fast');
+      error2.slideUp('fast');
+      console.log(error);
     } else if (tweet[0].textLength > 140) {
-      alert("Too many characters.");
+      error.slideUp('fast');
+      error2.slideDown('fast');
     } else {
+      error.slideUp('slow');
+      error2.slideUp('fast');
       $.ajax({ method: 'POST', url: '/tweets/', data: $(this).serialize() })
         .then(() => {
           loadNewTweet()
           tweet.val('');
-          let counter =  $('#letter-count');
+          let counter = $('#letter-count');
           counter.html(0);
-          tweet.attr('rows','1');
+          tweet.attr('rows', '1');
         });
     }
   });
