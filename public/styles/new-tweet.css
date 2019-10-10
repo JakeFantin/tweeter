@@ -1,5 +1,8 @@
 .new-tweet {
   padding-bottom: 1em;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.7s;
 }
 
 #tweet-zone textarea {
@@ -33,4 +36,10 @@
 
 .red {
   color: red;
+}
+
+
+.toggle {
+  height: 210px;
+  transition: height 0.7s;
 }

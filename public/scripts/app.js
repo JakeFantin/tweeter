@@ -5,18 +5,25 @@
  */
 $(document).ready(() => {
 
+
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   const createTweetElement = (tweet) => {
     const markup = `
   <article>
   <header>
     <div class="tweeter-profile">
       <img class="tweeter-pic" src='${tweet['user']['avatars']}'>
-      <a class="tweeter-name">${tweet['user']['name']}</a>
+      <a class="tweeter-name">${escape(tweet['user']['name'])}</a>
     </div>
-    <a class="tweeter-tag">${tweet['user']['handle']}</a>
+    <a class="tweeter-tag">${escape(tweet['user']['handle'])}</a>
   </header>
   <div class="tweet-textbox">
-    <p class="tweet-text">${tweet['content']['text']}</p>
+    <p class="tweet-text">${escape(tweet['content']['text'])}</p>
   </div>
   <footer>
     <a class="tweet-date">${new Date(tweet['created_at'])}</a>
@@ -38,12 +45,12 @@ $(document).ready(() => {
   <header>
     <div class="tweeter-profile">
       <img class="tweeter-pic" src='${tweet['user']['avatars']}'>
-      <a class="tweeter-name">${tweet['user']['name']}</a>
+      <a class="tweeter-name">${escape(tweet['user']['name'])}</a>
     </div>
-    <a class="tweeter-tag">${tweet['user']['handle']}</a>
+    <a class="tweeter-tag">${escape(tweet['user']['handle'])}</a>
   </header>
   <div class="tweet-textbox">
-    <p class="tweet-text">${tweet['content']['text']}</p>
+    <p class="tweet-text">${escape(tweet['content']['text'])}</p>
   </div>
   <footer>
     <a class="tweet-date">${new Date(tweet['created_at'])}</a>
