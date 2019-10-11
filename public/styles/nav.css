@@ -1,3 +1,4 @@
+/* css style sheet for navbar */
 nav {
   height: 120px;
   width: 100%;
@@ -7,20 +8,31 @@ nav {
   z-index: 100;
 }
 
-nav span {
+/* nav wrapper */
+.nav-content {
+  display: flex;
+  margin: 1.5em;
+  justify-content: space-between;
+}
+
+
+nav #logo {
   font-family: 'Bungee', sans-serif;
 }
 
+/* flexbox for button with text */
 nav .stacked {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* text for toggle button */
 nav .stacked span {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* toggle button, with animation */
 #showTweeter {
   background-color: transparent; 
   border: none;
@@ -32,16 +44,12 @@ nav .stacked span {
   outline: none;
 }
 
+/* image for toggle button */
 .fa-angle-double-down {
   color: red;
 }
 
-.nav-content {
-  display: flex;
-  margin: 1.5em;
-  justify-content: space-between;
-}
-
+/* animation for toggle button */
 @keyframes arrow {
   0% {transform: translate(0px, -5px)}
   100% {transform: translate(0px, 0px)}
