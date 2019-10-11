@@ -33,7 +33,7 @@ nav .stacked span {
 }
 
 /* toggle button, with animation */
-#showTweeter {
+#show-tweeter {
   background-color: transparent; 
   border: none;
   animation-name: arrow;
