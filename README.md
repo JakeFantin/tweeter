@@ -18,3 +18,15 @@ This repository is the starter code for the project: Students will fork and clon
 - md5
 - chance
 - body-parser
+
+## Screenshots
+
+
+![Desktop view, submission field hidden.](https://github.com/JakeFantin/tweeter/blob/master/docs/desktop-compact.png?raw=true)
+Desktop view, submission field hidden.
+
+![Desktop view, submission field expanded.](https://github.com/JakeFantin/tweeter/blob/master/docs/desktop-expanded.png)
+Desktop view, submission field expanded.
+
+![Tablet view, submission field hidden.](https://github.com/JakeFantin/tweeter/blob/master/docs/tablet-compact.png)
+Tablet view, submission field hidden.
