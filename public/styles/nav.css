@@ -1,9 +1,8 @@
 nav {
   height: 120px;
   width: 100%;
-  position: fixed;
-  top: 0;
-  background-color: transparent;
+  background-color: #d99e34;
+  background-image: url(../images/asfalt-light.png);
   color: #FFFFFF;
   z-index: 100;
 }
@@ -33,6 +32,10 @@ nav .stacked span {
   outline: none;
 }
 
+.fa-angle-double-down {
+  color: red;
+}
+
 .nav-content {
   display: flex;
   margin: 1.5em;
@@ -54,5 +57,6 @@ nav .stacked span {
 @media only screen and (min-width: 1024px) {
   nav {
   background-color: #4056A1;
+  background-image: none;
   };
 }

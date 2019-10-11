@@ -13,15 +13,6 @@ html {
 /*
  * Global layout stuff
  */
-#backNav {
-  height: 120px;
-  z-index: 4;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  background-color: #d99e34;
-  background-image: url(../images/asfalt-light.png);
-}
 
 body {
   color: #545149;
@@ -51,8 +42,17 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
  /* Tablet Styles */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 1024px) {
+  #content {
+    overflow-x: scroll;
+    height: calc(100vh - 120px);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 
+  #content::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Desktop styles */
@@ -60,17 +60,17 @@ main {
   main {
     width: 50%;
     margin: auto;
-    padding-top: 120px;
+    overflow-x: scroll;
+    height: calc(100vh - 120px);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  main::-webkit-scrollbar {
+    display: none;
   }
 
   #content {
     flex-direction: row;
   }
 
-  #placeholder {
-    width: 30%;
-    height: auto;
-    margin: auto 0;
-    margin-left: 50px;
-  }
 }

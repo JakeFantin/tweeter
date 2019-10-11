@@ -1,5 +1,5 @@
 header {
-  height: 520px;
+  height: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -35,8 +35,9 @@ header h2 {
     width: 30%;
     height: auto;
     top: 30vh;
+    margin: auto 0;
     margin-left: 50px;
-    position: fixed;
+    /* position: fixed; */
   }
 
   #profile-pic {

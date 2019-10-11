@@ -37,13 +37,16 @@
       <span>tweeter</span>
       <div class="stacked">
         <span><b>Write</b> a new tweet!</span>
-        <button id="showTweeter"><img src="/images/arrrow.png"></button>
+        <button id="showTweeter"><i class="fa fa-angle-double-down"></i></button>
       </div>
     </div>
   </nav>
-  <!-- The Nav color bar for smaller screen sizes -->
-  <div id="backNav"></div>
+
+  <!-- Page-specific (main) content here -->
+  <!-- flex wrapper for body content -->
   <div id="content">
+
+    <!-- Header - (fixed in larger screens) -->
     <header>
       <div id="profile-pic">
         <img src="/images/profile-hex.png">
@@ -52,9 +55,8 @@
         <h2>Your Name</h2>
       </div>
     </header>
-    <div id="placeholder"></div>
 
-    <!-- Page-specific (main) content here -->
+    <!-- Input area for new tweets -->
     <main class="container">
       <section class="new-tweet">
         <div class="errorMessage" id="authError"><i class="fa fa-exclamation-triangle"></i>Error: No characters = bad
@@ -67,6 +69,8 @@
           <input id="submit" type="submit" value="Tweet">
           <span id="letter-count" class="counter">140</span>
         </form>
+        
+        <!-- Section for past tweets -->
       </section>
       <section class="old-tweets">
       </section>
