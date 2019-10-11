@@ -1,11 +1,7 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+// client side JS file that dynamically loads old tweets
 $(document).ready(() => {
 
-
+  // escape funtion to protect for JS injection on user inputted text
   const escape = function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -61,9 +57,6 @@ $(document).ready(() => {
         const section = $('.old-tweets');
         let article = createTweetElement(res[res.length - 1]);
         section.prepend(article);
-        // const articleLoad = $('article .load');
-        // articleLoad.addClass('show');
-        // articleLoad.removeClass('load');
       })
   }
 

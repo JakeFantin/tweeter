@@ -34,13 +34,11 @@ header h2 {
   header {
     width: 30%;
     height: auto;
-    top: 30vh;
     margin: auto 0;
     margin-left: 50px;
-    /* position: fixed; */
   }
 
   #profile-pic {
-    padding-top: 30px;
+    padding-top: 60px;
   }
 }

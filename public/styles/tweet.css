@@ -96,6 +96,8 @@ article footer {
   height: 50%;
   font-size: 0.5em;
   padding-right: 23px;
+  opacity: 0;
+  transition: opacity 0.1s; 
 }
 
 article:hover {
@@ -107,6 +109,10 @@ article:hover {
 article:hover .tweeter-tag {
   opacity: 0.4;
   transition: opacity 0.3s;
-  
+}
+
+article:hover .tweet-icons {
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 
