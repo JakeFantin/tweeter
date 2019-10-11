@@ -4,7 +4,7 @@ $(document).ready(function() {
   let inputRows = '2';
 
   // listener on keyboard input into the textarea of tweet-zone
-  $('#new-tweet').on('input', function() {
+  $('#new-tweet-text').on('input', function() {
     const currentLength = $(this).val().length;
     const maxChars = 140;
     counter.html(maxChars-currentLength);

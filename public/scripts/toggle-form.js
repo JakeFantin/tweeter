@@ -2,7 +2,7 @@
 $(document).ready(function() {
   $('#showTweeter').click(function() {
     $('.new-tweet').slideToggle()
-    $('#new-tweet').focus();
+    $('#new-tweet-text').focus();
   });
 
 });

@@ -23,7 +23,7 @@ $(document).ready(() => {
     <p class="tweet-text">${escape(tweet['content']['text'])}</p>
   </div>
   <footer>
-    <a class="tweet-date">${new Date(tweet['created_at'])}</a>
+    <a class="tweet-date">${(new Date(tweet['created_at'])).toDateString()}</a>
     <div class="tweet-icons">
         <i class="fa fa-flag"></i>
         <i class="fa fa-heart"></i>
@@ -67,9 +67,9 @@ $(document).ready(() => {
   // listener funciton that handles submitted text, validates it, and stores it in memory then calls loadNewTweet
   $('#tweet-zone').on('submit', function(event) {
     event.preventDefault();
-    const tweet = $('#new-tweet');
-    const error = $('#authError');
-    const error2 = $('authError2');
+    const tweet = $('#new-tweet-text');
+    const error = $('#auth-error');
+    const error2 = $('#auth-error2');
     // form validation
     if (tweet[0].textLength === 0) {
       error.slideDown('fast');
@@ -87,7 +87,7 @@ $(document).ready(() => {
           loadNewTweet()
           tweet.val('');
           let counter = $('#letter-count');
-          counter.html(0);
+          counter.html(140);
           tweet.attr('rows', '1');
         });
     }

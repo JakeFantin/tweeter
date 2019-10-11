@@ -6,7 +6,7 @@
 }
 
 /* error message class, only used in the new-tweet section */
-.errorMessage {
+.error-message {
   display: none;
   border: 5px solid red;
   color: red;

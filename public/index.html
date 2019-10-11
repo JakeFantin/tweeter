@@ -58,13 +58,13 @@
     <!-- Input area for new tweets -->
     <main class="container">
       <section class="new-tweet">
-        <div class="errorMessage" id="authError"><i class="fa fa-exclamation-triangle"></i>Error: No characters = bad
+        <div class="error-message" id="auth-error"><i class="fa fa-exclamation-triangle"></i>Error: No characters = bad
           time.</div>
-        <div class="errorMessage" id="authError2"><i class="fa fa-exclamation-triangle"></i>Error: Too many characters.
+        <div class="error-message" id="auth-error2"><i class="fa fa-exclamation-triangle"></i>Error: Too many characters.
         </div>
         <h2>Compose Tweet</h2>
         <form id="tweet-zone" action="/tweets/" method="POST">
-          <textarea id="new-tweet" name="text" rows="1" placeholder="What are you humming about?"></textarea>
+          <textarea id="new-tweet-text" name="text" rows="1" placeholder="What are you humming about?"></textarea>
           <input id="submit" type="submit" value="Tweet">
           <span id="letter-count" class="counter">140</span>
         </form>
