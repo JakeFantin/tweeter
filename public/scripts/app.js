@@ -8,6 +8,7 @@ $(document).ready(() => {
     return div.innerHTML;
   }
 
+  // creates a tweet from an object of tweet data
   const createTweetElement = (tweet) => {
     const markup = `
   <article>
@@ -35,6 +36,7 @@ $(document).ready(() => {
     return markup;
   };
 
+  // takes an array of tweet objects, renders them in html and appends them to the page
   const renderTweets = function(tweets) {
     const section = $('.old-tweets');
     for (const tweet of tweets) {
@@ -42,15 +44,17 @@ $(document).ready(() => {
       section.prepend(article);
     }
   }
-
+  // fetches an array of tweet objects from memory database and passes them to rendering function
   const loadTweets = function() {
     $.ajax({ method: 'GET', url: '/tweets/' })
       .then((res) => {
         renderTweets(res);
       })
   }
+  // calling loadTweets
   loadTweets();
 
+  // function that loads the most recently saved tweet on the page after its been created, possibility to an animation for entering later
   const loadNewTweet = function() {
     $.ajax({ method: 'GET', url: '/tweets/' })
       .then((res) => {
@@ -60,12 +64,13 @@ $(document).ready(() => {
       })
   }
 
+  // listener funciton that handles submitted text, validates it, and stores it in memory then calls loadNewTweet
   $('#tweet-zone').on('submit', function(event) {
     event.preventDefault();
     const tweet = $('#new-tweet');
     const error = $('#authError');
     const error2 = $('authError2');
-    // Form Validation
+    // form validation
     if (tweet[0].textLength === 0) {
       error.slideDown('fast');
       error2.slideUp('fast');
@@ -73,8 +78,9 @@ $(document).ready(() => {
     } else if (tweet[0].textLength > 140) {
       error.slideUp('fast');
       error2.slideDown('fast');
+    // if it passes both tests, hides any showing errors, saves the text in a tweet object, loads the new tweet on the page and resets the submission form
     } else {
-      error.slideUp('slow');
+      error.slideUp('fast');
       error2.slideUp('fast');
       $.ajax({ method: 'POST', url: '/tweets/', data: $(this).serialize() })
         .then(() => {
