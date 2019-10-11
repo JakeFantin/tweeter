@@ -25,6 +25,14 @@ body {
   justify-items: flex-start;
 }
 
+/* wrapper for body content without the nav */
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+}
+
+/* where the new tweets are made and the old-tweets are displayed */
 main {
   margin: auto;
   width: 90%;
@@ -32,17 +40,10 @@ main {
   z-index: 2;
 }
 
-#content {
-  display: flex;
-  flex-direction: column;
-  justify-items: flex-start;
-}
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+  
  /* Tablet Styles */
 @media only screen and (max-width: 1024px) {
+  /* gives the content of the page an internal scroll (header with main) */
   #content {
     overflow-x: scroll;
     height: calc(100vh - 120px);
@@ -57,6 +58,7 @@ main {
 
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
+  /* allows the main to scroll without scrolling the header */
   main {
     width: 50%;
     margin: auto;
@@ -68,7 +70,7 @@ main {
   main::-webkit-scrollbar {
     display: none;
   }
-
+  /* changes the contents of the page to a row format header<->main */
   #content {
     flex-direction: row;
   }
